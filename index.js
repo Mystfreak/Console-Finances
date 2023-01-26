@@ -94,19 +94,15 @@ console.log("Number of months: ", finances.length);
 
 //Total Profits
 let total = 0
-for(let i = 0; i < finances.length; i++){
-total += finances[i][1];
-}
-console.log("This total is: ", total);
-
-//Average change 
-let averageChange = total / finances.length;
-console.log("Average: ", averageChange);
-
-//Greatest Increase in Profits
-let increase = 0;
-for(let j = 0; j < finances.length; j++){
-    if(finances[j][1] > 0);{
-        
+//Compare profits
+let compare = 0;
+let compareTotal = 0;
+for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
+    total += finances[i][1];
+    // compute monthly change in profit and loss
+    compare = (finances[j][1]) - (finances[i][1]);
+    compareTotal += compare;
     }
-}
+    console.log("This total is: ", total);
+    console.log("Total changes in profit and loss:", compareTotal)
+    
