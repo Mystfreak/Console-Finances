@@ -117,10 +117,17 @@ for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
             maxProfitamount = compare;
             maxProfitMthFrom = finances[i][0];
             maxProfitamountFrom = finances[i][1];
-            
+            maxProfitMthTo = finances[j][0];
+            maxProfitamountTo = finances[j][1];
         }
     }
+
+    else {
+        compare = 0;
+     }
     }
+    
+    // console logging the results
     console.log("This total is: ", total);
     console.log("Total changes in profit and loss:", compareTotal)
     
