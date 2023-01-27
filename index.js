@@ -146,8 +146,7 @@ for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
         return x;
     }
     // console logging the results
-    //Total Number of Months Included in the DataSet
-    console.log("Financial Analysis");
+    console.log("Financial Analysis"); //Total Number of Months Included in the DataSet
     console.log('-----------------------------')
     console.log("Number of months: ", finances.length);
     console.log("This total is: ", total);
