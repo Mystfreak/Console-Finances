@@ -97,11 +97,29 @@ let total = 0
 //Compare profits
 let compare = 0;
 let compareTotal = 0;
+
+//Find maximum increase 
+let maxProfitamount = 0;
+let maxProfitMthFrom;
+let maxProfitamountFrom;
+let maxProfitMthTo;
+let maxProfitamountTo;
+
 for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
     total += finances[i][1];
     // compute monthly change in profit and loss
     compare = (finances[j][1]) - (finances[i][1]);
     compareTotal += compare;
+
+    //check for max and min change in profits and losses
+    if (compare > 0) {
+        if (compare > maxProfitamount ) {
+            maxProfitamount = compare;
+            maxProfitMthFrom = finances[i][0];
+            maxProfitamountFrom = finances[i][1];
+            
+        }
+    }
     }
     console.log("This total is: ", total);
     console.log("Total changes in profit and loss:", compareTotal)
