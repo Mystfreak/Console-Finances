@@ -98,12 +98,19 @@ let total = 0
 let compare = 0;
 let compareTotal = 0;
 
-//Find maximum increase 
+// maximum increase 
 let maxProfitamount = 0;
 let maxProfitMthFrom;
 let maxProfitamountFrom;
 let maxProfitMthTo;
 let maxProfitamountTo;
+
+// maximum decrease
+let maxLossamount = 0;
+let maxLossMthFrom;
+let maxLossamountFrom;
+let maxLosstMthTo;
+let maxLossamountTo;
 
 for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
     total += finances[i][1];
