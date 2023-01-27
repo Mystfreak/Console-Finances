@@ -153,4 +153,6 @@ for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
     console.log("This total is: ", total);
     console.log("Total changes in profit and loss:", compareTotal)
     console.log("Average changes in profit and loss:", formatAmount(compareTotal / (finances.length - 1)));
+    console.log("Max increase in profit of", formatAmount(maxProfitamount,0), "is from", maxProfitMthFrom, "(" + formatAmount(maxProfitamountFrom, 0) + ") to", maxProfitMthTo, "("+ formatAmount(maxProfitamountTo , 0) + ").");
+    console.log("Max decrease in profit of", formatAmount(maxLossamount, 0), "is from", maxLossMthFrom, "(" + formatAmount(maxLossamountFrom, 0) + ") to", maxLossMthTo, "("+ formatAmount(maxLossamountTo, 0) + ").");
     
