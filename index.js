@@ -152,4 +152,5 @@ for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
     console.log("Number of months: ", finances.length);
     console.log("This total is: ", total);
     console.log("Total changes in profit and loss:", compareTotal)
+    console.log("Average changes in profit and loss:", formatAmount(compareTotal / (finances.length - 1)));
     
