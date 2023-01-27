@@ -87,10 +87,7 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-//Total Number of Months Included in the DataSet
-console.log("Financial Analysis");
-console.log('-----------------------------')
-console.log("Number of months: ", finances.length);
+
 
 //Total Profits
 let total = 0
@@ -127,6 +124,14 @@ for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
             maxProfitMthTo = finances[j][0];
             maxProfitamountTo = finances[j][1];
         }
+    } else if (compare < 0) {
+        if (compare < maxLossamount) {
+            maxLossamount = compare;
+            maxLossMthFrom = finances[i][0];
+            maxLossamountFrom = finances[i][1];
+            maxLossMthTo = finances[j][0];
+            maxLossamountTo = finances[j][1];
+        }
     }
 
     else {
@@ -141,6 +146,10 @@ for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
         return x;
     }
     // console logging the results
+    //Total Number of Months Included in the DataSet
+    console.log("Financial Analysis");
+    console.log('-----------------------------')
+    console.log("Number of months: ", finances.length);
     console.log("This total is: ", total);
     console.log("Total changes in profit and loss:", compareTotal)
     
