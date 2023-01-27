@@ -126,7 +126,13 @@ for(let i = 0, j = 1; (i < finances.length) && (j < finances.length); i++, j++){
         compare = 0;
      }
     }
-    
+
+    //function to convert values to sterling
+    function formatAmount(x, y) {
+        x = x.toLocaleString('en-GB', {style: "currency", 
+        currency: "GBP", minimumFractionDigits: y});
+        return x;
+    }
     // console logging the results
     console.log("This total is: ", total);
     console.log("Total changes in profit and loss:", compareTotal)
